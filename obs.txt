@@ -1,0 +1,6 @@
+link bot = https://discordapp.com/oauth2/authorize?client_id=680682360668160000&scope=bot&permissions=537394240
+sheet = https://docs.google.com/spreadsheets/d/1BVhQW5Ex8CkxfHptN17M4o35tIK__pJ8kDRGL57JQzU/edit#gid=2037981877
+comando:
+-pt1 (1 a 8)
+-class
+-in

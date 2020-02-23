@@ -1,0 +1,5 @@
+npm init
+npm install discord.js
+npm install googleapis@39 --save
+
+online na heroku
