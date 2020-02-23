@@ -1,10 +1,9 @@
 const Discord = require('discord.js')
 const {google} = require('googleapis')
 const keys = require('./keys.json')
+const help = require('./help.json')
 
-const bot = new Discord.Client()
-const token ='NjgwNjgyMzYwNjY4MTYwMDAw.XlIuFQ.ZRRl-6YAgHYoM8Sk4VOukFlWIT4'
-
+//-------------------------Heroku-----------------------------
 const express = require('express')
 const path = require ('path')
 const PORT = process.env.PORT || 5000
@@ -15,9 +14,13 @@ express()
     .set('view engine','ejs')
     .get('/',(req,res) => console.render('pages/index'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+//-------------------------------------------------------------
+const bot = new Discord.Client()
+const token = require('./token.json')
+
+bot.login(token.token)
 
 
-bot.login(token)
 bot.on('ready', ()=> {
     bot.user.setActivity('Bot Simulator')
     console.log("I'm ready! ")
@@ -25,6 +28,16 @@ bot.on('ready', ()=> {
 
 
 bot.on('message', msg => {
+    if(msg.content ==='-ajuda'){
+        msg.reply(help.ajuda)
+    }
+    if(msg.content ==='-comandos'){
+        msg.reply(help.comandos)
+    }
+    if(msg.content ==='-help'){
+        msg.reply(help.help)
+    }
+
     if(msg.content ==='-pt1'){
     
         const client = new google.auth.JWT(

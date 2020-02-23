@@ -1,0 +1,5 @@
+bot = https://discordapp.com/developers/applications
+bot convite= https://discordapp.com/oauth2/authorize?client_id=680682360668160000&scope=bot&permissions=537394240
+planilha = https://docs.google.com/spreadsheets/d/1BVhQW5Ex8CkxfHptN17M4o35tIK__pJ8kDRGL57JQzU/edit#gid=1147279214
+github = https://github.com/LucasPMedeiros/DiscordBotSheet
+hospedagem = https://www.heroku.com/
