@@ -3,7 +3,7 @@ const {google} = require('googleapis')
 const keys = require('./keys.json')
 
 const bot = new Discord.Client()
-const token ='NjgwNjgyMzYwNjY4MTYwMDAw.XlHqag.iqk02cbYEEidajhEE4DWz7FZfQg'
+const token ='NjgwNjgyMzYwNjY4MTYwMDAw.XlIYWA.3_RqcMalSsNPB9rudcvw1RZLArc'
 
 bot.login(token)
 bot.on('ready', ()=> {
