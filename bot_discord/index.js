@@ -3,10 +3,23 @@ const {google} = require('googleapis')
 const keys = require('./keys.json')
 
 const bot = new Discord.Client()
-const token ='NjgwNjgyMzYwNjY4MTYwMDAw.XlIYWA.3_RqcMalSsNPB9rudcvw1RZLArc'
+const token ='NjgwNjgyMzYwNjY4MTYwMDAw.XlIuFQ.ZRRl-6YAgHYoM8Sk4VOukFlWIT4'
+
+const express = require('express')
+const path = require ('path')
+const PORT = process.env.PORT || 5000
+
+express()
+    .use(express.static(path.join(__dirname,'public')))
+    .set('views',path.join(__dirname,'views'))
+    .set('view engine','ejs')
+    .get('/',(req,res) => console.render('pages/index'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
 
 bot.login(token)
 bot.on('ready', ()=> {
+    bot.user.setActivity('Bot Simulator')
     console.log("I'm ready! ")
 })
 
@@ -53,7 +66,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -100,7 +113,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -147,7 +160,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -194,7 +207,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -241,7 +254,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -288,7 +301,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -335,7 +348,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -382,7 +395,7 @@ bot.on('message', msg => {
         
             let tudo = '\n'+ linha1 +'\n'+ linha2 +'\n'+ linha3 +'\n'+ linha4 +'\n'+ linha5 +'\n'+ linha6
                     
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
     
         }                
@@ -431,7 +444,7 @@ bot.on('message', msg => {
                 }
             }
 
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
         }                
     }
@@ -469,7 +482,7 @@ bot.on('message', msg => {
             let dataArray = data.data.values
             
             var tudo= dataArray[0][0]+'= '+dataArray[0][1]
-            msg.reply(tudo)
+            msg.channel.send(tudo)
         
         }                
     }
