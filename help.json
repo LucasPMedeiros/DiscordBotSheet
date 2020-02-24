@@ -1,0 +1,6 @@
+{
+    "comandos" : "\n  ver os grupos: -pt1, ...,-pt8 (1 a 8) \n ver as classes: -class \n ver perssoas na raid: -in \n guia do andar: -guia1 (1 a 55) \n ver geristros: -reg \n ver banidos: -ban",
+    "ajuda": "\n  ver os grupos: -pt1, ...,-pt8 (1 a 8) \n ver as classes: -class \n ver perssoas na raid: -in \n guia do andar: -guia1 (1 a 55) \n ver geristros: -reg \n ver banidos: -ban",
+    "help":  "\n  ver os grupos: -pt1, ...,-pt8 (1 a 8) \n ver as classes: -class \n ver perssoas na raid: -in \n guia do andar: -guia1 (1 a 55) \n ver geristros: -reg \n ver banidos: -ban"
+
+}
