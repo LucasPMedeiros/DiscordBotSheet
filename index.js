@@ -3,7 +3,7 @@ const {google} = require('googleapis')
 const keys = require('./keys.json')
 const help = require('./help.json')
 
-/*//-------------------------Heroku-----------------------------
+//-------------------------Heroku-----------------------------
 const express = require('express')
 const path = require ('path')
 const PORT = process.env.PORT || 5000
@@ -14,10 +14,19 @@ express()
     .set('view engine','ejs')
     .get('/',(req,res) => console.render('pages/index'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-*///-------------------------------------------------------------
+//-------------------------------------------------------------
+var reqTimer = setTimeout(function wakeUp() {
+    request("https://newordersth.herokuapp.com/", function() {
+       console.log("WAKE UP DYNO");
+    });
+    return reqTimer = setTimeout(wakeUp, 1200000);
+ }, 1200000);
 
+//-------------------------------------------------------------------
 const bot = new Discord.Client()
 const token = require('./token.json')
+
+
 
 bot.login(token.token)
 
